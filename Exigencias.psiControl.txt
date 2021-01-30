@@ -1,0 +1,32 @@
+
+
+
+
+	paciente (orientação profissional, re-orientação profissional, orientação de carreira, planejamento de aposentadoria)
+		- nome
+		- data de nascimento
+		- idade
+		- endereço completo
+		- telefone/celular
+		- nome do responsável / número do responsável (se for de menor)
+		- cpf
+		- valor da sessão (ou isento)
+		- ocupação atual
+		- status
+	
+
+
+	formaDePagamento(); - parcelado (por sessao ou personalizado) 
+	controleFinanceiro(); - boleto, dinheiro, transferencia, deposito bancario, pix, débito, crédito
+	agendaDeSessao(); - projeções
+	notasDeSessao(); (exercicio de casa, feedback do paciente, notas relevantes, assunto do dia) -numerada ex: sessao1, sessao2
+	controleDeSessao(); (paga ou não)
+	agenda();
+	- presença e falta (faltas não serão cobradas)
+
+	idéias futuras:
+		- guardar comprovantes (upload)
+		
+	
+	
+	
