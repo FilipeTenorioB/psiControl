@@ -9,12 +9,15 @@ public class Cliente {
     private int idade;
     private String cpf;
     private String profissao;
-    private String endereço;
+    private String endereco;
     private String numeroDoCelular;
     private int valorDaSessao;
     private static int quantidadeClientes;
 
     public String getNome() {
+        if(nome == null){
+            this.nome = "Informação ainda não atualizada.";
+        }
         return nome;
     }
 
@@ -37,6 +40,10 @@ public class Cliente {
     public void setIdade(int idade) {
         this.idade = idade;
     }
+
+    public String getCpf() {
+        return cpf;
+    }
     
     public void setCpf(String cpf) {
         this.cpf = cpf;
@@ -50,12 +57,12 @@ public class Cliente {
         this.profissao = profissao;
     }
 
-    public String getEndereço() {
-        return endereço;
+    public String getEndereco() {
+        return endereco;
     }
 
-    public void setEndereço(String endereço) {
-        this.endereço = endereço;
+    public void setEndereco(String endereço) {
+        this.endereco = endereço;
     }
 
     public void setNumeroDoCelular(String numeroDoCelular) {
