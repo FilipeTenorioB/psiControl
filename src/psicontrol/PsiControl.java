@@ -19,10 +19,13 @@ public class PsiControl {
         System.out.println("Opção 5: Acessar controle financeiro.");
         System.out.println("Opção 6: Fechar aplicativo.");
         System.out.println();
+        
+        
 
         do {
 
             opcao = entrada.nextInt();
+            
 
             switch (opcao) {
                 case 1:
@@ -32,7 +35,8 @@ public class PsiControl {
                     //formalizarPagamentoDoCliente(Cliente cliente);
                     break;
                 case 3:
-                    //acessarInformacoesDoCliente(Cliente cliente);
+                    Cliente novoCliente = new Cliente();
+                    acessarInformacoesDoCliente(novoCliente);
                     break;
                 case 4:
                     //agendarConsulta(Cliente cliente, String data);
@@ -44,16 +48,15 @@ public class PsiControl {
                     System.out.println("ATENÇÃO PSICÓLOGO(A)! Apenas funcionarão opções entre 1 e 6.");
                     break;
             }
-        } while (opcao == 6);
+        } while (opcao != 6);
 
     }
 
     public static void cadastrarCliente() {
 
         Scanner entrada = new Scanner(System.in);
-
         Cliente novoCliente = new Cliente();
-
+        
         System.out.println();
         System.out.println("Insira o nome completo do cliente: ");
         novoCliente.setNome(entrada.nextLine());
@@ -61,6 +64,10 @@ public class PsiControl {
         System.out.println();
         System.out.println("Insira a idade do cliente: ");
         novoCliente.setIdade(entrada.nextInt());
+        
+        System.out.println();
+        System.out.println("Insira a data de nascimento do cliente: (ex: 02/07/1995)");
+        novoCliente.setDataDeNascimento(entrada.nextLine());
 
         System.out.println();
         System.out.println("Insira o CPF do cliente: (ex: 078.424.632-01)");
@@ -81,6 +88,7 @@ public class PsiControl {
         System.out.println();
         System.out.println("Nome completo:" + novoCliente.getNome());
         System.out.println("Idade:" + novoCliente.getIdade());
+        System.out.println("Data de nascimento:" + novoCliente.getDataDeNascimento());
         System.out.println("CPF:" + novoCliente.getCpf());
         System.out.println("Profissão:" + novoCliente.getProfissao());
         System.out.println("Endereço:" + novoCliente.getEndereco());
@@ -89,6 +97,18 @@ public class PsiControl {
         System.out.println();
         System.out.println("Deseja confirmar o cadastro?");
 
+    }
+    
+    public static void acessarInformacoesDoCliente(Cliente novoCliente){
+        
+        System.out.println("Nome completo:" + novoCliente.getNome());
+        System.out.println("Idade:" + novoCliente.getIdade());
+        System.out.println("Data de nascimento:" + novoCliente.getDataDeNascimento());
+        System.out.println("CPF:" + novoCliente.getCpf());
+        System.out.println("Profissão:" + novoCliente.getProfissao());
+        System.out.println("Endereço:" + novoCliente.getEndereco());
+        System.out.println("Número para contato:" + novoCliente.getNumeroDoCelular());
+        
     }
 
 }
