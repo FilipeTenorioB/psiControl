@@ -13,9 +13,6 @@ public class Cliente {
     private static int quantidadeClientes;
 
     public String getNome() {
-        if (nome == null) {
-            mensagemErroInformacaoNaoAtualizada();
-        }
         return nome;
     }
 
@@ -24,9 +21,6 @@ public class Cliente {
     }
 
     public String getDataDeNascimento() {
-        if (dataDeNascimento == null) {
-            mensagemErroInformacaoNaoAtualizada();
-        }
         return dataDeNascimento;
     }
 
@@ -35,9 +29,6 @@ public class Cliente {
     }
 
     public int getIdade() {
-        if(idade == 0){
-            mensagemErroInformacaoNaoAtualizada();
-        }
         return idade;
     }
 
@@ -46,9 +37,6 @@ public class Cliente {
     }
 
     public String getCpf() {
-        if(cpf == null){
-            mensagemErroInformacaoNaoAtualizada();
-        }
         return cpf;
     }
 
@@ -57,9 +45,6 @@ public class Cliente {
     }
 
     public String getProfissao() {
-        if(profissao == null){
-            mensagemErroInformacaoNaoAtualizada();
-        }
         return profissao;
     }
 
@@ -68,9 +53,6 @@ public class Cliente {
     }
 
     public String getEndereco() {
-        if(endereco == null){
-            mensagemErroInformacaoNaoAtualizada();
-        }
         return endereco;
     }
 
@@ -100,12 +82,6 @@ public class Cliente {
 
     public static void setQuantidadeClientes(int quantidadeClientes) {
         Cliente.quantidadeClientes = quantidadeClientes;
-    }
-    
-    public static void mensagemErroInformacaoNaoAtualizada(){
-        
-            System.out.println("Informação ainda não atualizada. Favor atualizar em nossa função 'Cadastrar Cliente'.");
-        
     }
 
 }
