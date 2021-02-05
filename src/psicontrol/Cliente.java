@@ -11,6 +11,7 @@ public class Cliente {
     private String numeroDoCelular;
     private int valorDaSessao;
     private static int quantidadeClientes;
+    private informacoesFinanceiro informacoesFinanceiroDoCliente;
 
     public String getNome() {
         return nome;
